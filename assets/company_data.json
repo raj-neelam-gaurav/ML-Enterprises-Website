@@ -1,0 +1,213 @@
+{
+  "company": {
+    "name": "ML Enterprises LLP",
+    "established": {
+      "original_year": 1972,
+      "company_reformation_year": 2008,
+      "llp_transition_year": 2020
+    },
+    "company_theme_colors": [
+      "red",
+      "black",
+      "white"
+    ],
+    "headquarters": "Rewari, Haryana, India",
+    "type": "Limited Liability Partnership",
+    "industry": [
+      "Railway and Siding Works",
+      "PEB Warehouse Projects",
+      "Electrical Works",
+      "FFS Works",
+      "Silo Projects",
+      "Civil Construction",
+      "Infrastructure Development"
+    ],
+    "timeline": [
+      {
+        "year": 1972,
+        "event": "Company founded as M/s. Sis Ram Bir Singh in Rewari, Haryana, focusing on civil construction and infrastructure projects."
+      },
+      {
+        "year": 1990,
+        "event": "Expanded capabilities in railway and road construction, acquiring key machinery and technical expertise."
+      },
+      {
+        "year": 2008,
+        "event": "Rebranded as ML Enterprises; began handling large-scale railway siding projects PAN India."
+      },
+      {
+        "year": 2010,
+        "event": "Completed major EPC contracts in railway and roadway infrastructure, building a strong reputation in the domain."
+      },
+      {
+        "year": 2015,
+        "event": "Diversified into PEB warehouse, electrical, and FFS works; strengthened technical manpower and in-house survey units."
+      },
+      {
+        "year": 2020,
+        "event": "Transitioned into ML Enterprises LLP to support expansion and formalize partnerships."
+      },
+      {
+        "year": 2022,
+        "event": "Established automatic paver plant for in-house material production and enhanced construction efficiency."
+      },
+      {
+        "year": 2024,
+        "event": "Achieved a turnover of INR 53.31 Crore for FY 2024–2025, executing over 65 successful projects."
+      },
+      {
+        "year": 2025,
+        "event": "Currently executing projects worth INR 129.57 Crore across 8 Indian states, employing 90+ professionals."
+      }
+    ],
+    "competence": {
+      "core_values": [
+        "Commitment to excellence",
+        "Mutual trust and client satisfaction",
+        "High-quality and timely project delivery"
+      ],
+      "expertise": [
+        "Detailed Engineering Survey and Final Location Survey",
+        "Alignment Design for Railways and Roadways",
+        "Earthwork execution for Railways and Roadways",
+        "Supply and Laying of Ballast",
+        "Laying and Linking of P. Way",
+        "Execution of Bridges for Rail and Road",
+        "Service buildings, stations, and terminals",
+        "Annual maintenance of rail infrastructure",
+        "Concept-to-commissioning EPC execution",
+        "Material investigation and laboratory testing",
+        "In-house survey and technical design"
+      ],
+      "resources": [
+        "Full-fledged material investigation laboratory",
+        "In-house survey team",
+        "Comprehensive plant and machinery base",
+        "Trained and experienced technical manpower"
+      ]
+    },
+    "financials": {
+      "turnover": {
+        "FY_2024_2025": "INR 53.31 Crore",
+        "FY_2025_2026_ongoing": "INR 129.57 Crore",
+        "FY_2025_2026_as_of_July": "INR 20.46 Crore"
+      }
+    },
+    "projects": {
+      "completed": 65,
+      "current": "Projects worth INR 129.57 Crore under execution",
+      "locations": [
+        "Ujjain, Madhya Pradesh",
+        "Dhar, Madhya Pradesh",
+        "Damoh, Madhya Pradesh",
+        "Guna, Madhya Pradesh",
+        "Neemkathana, Rajasthan",
+        "Nagpur, Maharashtra",
+        "Panipat, Haryana",
+        "Kanpur, Uttar Pradesh"
+      ],
+      "count_active_locations": 8
+    },
+    "operations": {
+      "facilities": [
+        "Automatic paver plant for in-house production",
+        "Extensive fleet of machinery for construction activities"
+      ],
+      "employee_strength": 90
+    },
+    "clients": {
+      "names": [
+        "Adani Group",
+        "Pristine Logistics & Infraprojects Ltd.",
+        "Shivakriti International Ltd.",
+        "Rail Vikas Nigam Limited (RVNL)",
+        "Vedanta Limited",
+        "ARSS Infrastructure Projects Ltd.",
+        "Hindustan Zinc Limited",
+        "Worlds Window Group"
+      ],
+      "logos_reference": "from the internet"
+    },
+    "values_and_culture": {
+      "growth_and_learning": {
+        "career_path": "Clear career progression with regular promotions",
+        "training": "Access to training programs, mentorship, and certifications",
+        "learning_culture": "Encourages continuous learning and innovation"
+      },
+      "work_life_balance": {
+        "environment": "Supportive with flexible policies",
+        "respect_for_personal_time": true,
+        "initiatives": [
+          "Regular team events and celebrations",
+          "Wellness initiatives"
+        ],
+        "annual_leave": "30 days",
+        "salary_policy": "On-time salary without delays"
+      },
+      "rewards_and_benefits": {
+        "salary": "Competitive with performance-linked incentives",
+        "health_coverage": "₹3,00,000 for employees and families",
+        "perks": [
+          "Transport facility from site to guest house",
+          "Meals and accommodation for bachelors",
+          "T-shirts, bedding, blankets, and other essentials"
+        ]
+      },
+      "culture": {
+        "environment": "Open, collaborative, and inclusive",
+        "recognition": "Acknowledges employee contributions",
+        "team_spirit": "Celebrates achievements collectively"
+      },
+      "meaningful_work": {
+        "impact": "Projects that contribute to industry growth and innovation",
+        "vision": "Future-focused organization building next-generation infrastructure"
+      }
+    },
+    "employee_testimonials": [
+      {
+        "name": "Kunal Das",
+        "designation": "Project Manager",
+        "joined_as": "Site Engineer",
+        "joined_date": "March 2023",
+        "quote": "The growth here is real and supported every step of the way.",
+        "location": "Panipat"
+      },
+      {
+        "name": "Dinesh Kumar",
+        "designation": "Senior Foreman",
+        "quote": "Everyone is approachable, ideas are heard, and teamwork makes even the hardest tasks achievable."
+      }
+    ],
+    "recruitment_and_careers": {
+      "message": "At ML Enterprises LLP, we don't just offer jobs—we build careers.",
+      "culture_promise": "Workplace where your contribution matters, growth is supported, and success is celebrated.",
+      "previous_organization_backgrounds": [
+        "Adani",
+        "Jindal",
+        "KEC",
+        "Ashoka Buildcon"
+      ]
+    },
+    "documents": {
+      "attached": [
+        "Company Profile with supporting documents",
+        "Company Financials (last 3 years)",
+        "Safety Documents",
+        "Quality Documents",
+        "Appreciation Letters",
+        "Machinery and Manpower Details"
+      ],
+      "pending": [
+        "Work details (completed and ongoing)"
+      ]
+    },
+    "contact": {
+      "email": null,
+      "phone": null,
+      "address": "Rewari, Haryana, India"
+    },
+    "summary": {
+      "overview": "ML Enterprises LLP is a seasoned civil and infrastructure company with five decades of experience across railway, road, bridge, silo, and industrial construction. Evolving from a traditional firm into a modern LLP, it combines technical expertise, innovation, and a strong client-focused culture to deliver excellence PAN India."
+    }
+  }
+}
