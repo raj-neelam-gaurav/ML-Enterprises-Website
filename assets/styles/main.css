@@ -29,7 +29,7 @@ header {
     width: 100%;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: all 0.3s ease;
 }
@@ -159,7 +159,7 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
+    background:
         radial-gradient(circle at 20% 50%, rgba(225, 6, 0, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(0, 123, 255, 0.1) 0%, transparent 50%);
     animation: gradientShift 15s ease infinite;
@@ -167,8 +167,15 @@ nav {
 }
 
 @keyframes gradientShift {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
 }
 
 .hero-navigation {
@@ -259,6 +266,7 @@ nav {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -355,7 +363,7 @@ nav {
     height: 500px;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
@@ -486,13 +494,13 @@ nav {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 .project-image {
@@ -572,7 +580,7 @@ nav {
     max-width: 100%;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
 .map-note {
@@ -602,14 +610,14 @@ nav {
     border-radius: 15px;
     text-align: center;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: relative;
 }
 
 .location-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .location-image {
@@ -706,7 +714,7 @@ nav {
 
 .benefit-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .benefit-item h4 {
@@ -764,7 +772,7 @@ footer {
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     opacity: 0.7;
 }
 
@@ -874,13 +882,13 @@ section {
     align-items: center;
     justify-content: center;
     min-height: 120px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
 }
 
 .client-logo:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .client-logo img {
@@ -929,13 +937,13 @@ section {
     padding: 3rem;
     border-radius: 20px;
     border-left: 5px solid var(--primary-red);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
 }
 
 .testimonial-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
 .quote-icon {
@@ -1012,13 +1020,13 @@ section {
     padding: 2.5rem;
     border-radius: 15px;
     border-top: 4px solid var(--accent-blue);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
 }
 
 .culture-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     border-top-color: var(--primary-red);
 }
 
@@ -1042,7 +1050,7 @@ section {
 .culture-image {
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     height: 300px;
 }
 
@@ -1102,7 +1110,7 @@ section {
 
 .training-feature:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .feature-icon {
@@ -1130,7 +1138,7 @@ section {
 .training-image {
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     height: 250px;
 }
 
@@ -1158,5 +1166,608 @@ section {
     .culture-image,
     .training-image {
         height: 250px;
+    }
+}
+
+/* ========== NEW STYLES - ADD AT THE END ========== */
+
+/* Contact Modal Styles */
+.contact-trigger {
+    background: var(--primary-red);
+    color: white !important;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.contact-trigger:hover {
+    background: var(--accent-blue);
+    transform: translateY(-2px);
+}
+
+.contact-trigger::after {
+    display: none;
+}
+
+.contact-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-modal.show {
+    display: flex;
+}
+
+.contact-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+}
+
+.contact-modal-content {
+    background: white;
+    padding: 3rem;
+    border-radius: 25px;
+    max-width: 650px;
+    width: 90%;
+    position: relative;
+    z-index: 10000;
+    animation: modalSlideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: scale(0.7) translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+.contact-close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-gray);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    line-height: 1;
+}
+
+.contact-close:hover {
+    background: var(--light-gray);
+    color: var(--primary-red);
+    transform: rotate(90deg);
+}
+
+.contact-modal-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: var(--secondary-black);
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: var(--light-gray);
+    border-radius: 15px;
+    border-left: 5px solid var(--primary-red);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    background: #fff;
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.contact-details h4 {
+    font-size: 1.3rem;
+    color: var(--secondary-black);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.contact-details p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.contact-details a {
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--accent-blue);
+}
+
+/* Typewriter Effect */
+.typewriter-text {
+    display: inline-block;
+    border-right: 3px solid var(--primary-red);
+    animation: blink 0.7s step-end infinite;
+    min-width: 280px;
+    text-align: left;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Flipable Benefit Cards */
+.benefit-flip-card {
+    perspective: 1000px;
+    height: 180px;
+}
+
+.benefit-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.benefit-flip-card:hover .benefit-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.benefit-flip-front,
+.benefit-flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.benefit-flip-front {
+    background: var(--light-gray);
+    border: 2px solid var(--accent-blue);
+}
+
+.benefit-flip-back {
+    background: linear-gradient(135deg, var(--primary-red) 0%, #b00500 100%);
+    color: white;
+    transform: rotateY(180deg);
+    padding: 1.5rem;
+}
+
+.benefit-flip-front h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-red);
+    font-weight: 700;
+}
+
+.benefit-flip-front p {
+    color: #666;
+}
+
+.benefit-flip-back h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.benefit-flip-back p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.contact-trigger-btn {
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+/* Testimonials Marquee */
+.testimonials-marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.testimonials-track {
+    display: flex;
+    gap: 2rem;
+    animation: scroll 60s linear infinite;
+    width: fit-content;
+}
+
+.testimonials-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.testimonial-card-marquee {
+    background: var(--light-gray);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border-left: 5px solid var(--primary-red);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    min-width: 450px;
+    max-width: 450px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card-marquee:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card-marquee .quote-icon {
+    font-size: 4rem;
+    color: var(--primary-red);
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-family: Georgia, serif;
+}
+
+.testimonial-card-marquee .testimonial-text {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--text-gray);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.testimonial-card-marquee .testimonial-author h4 {
+    font-size: 1.2rem;
+    color: var(--secondary-black);
+    margin-bottom: 0.3rem;
+}
+
+.testimonial-card-marquee .testimonial-author .designation {
+    color: var(--primary-red);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.testimonial-card-marquee .testimonial-author .journey,
+.testimonial-card-marquee .testimonial-author .location {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+/* Responsive Updates */
+@media (max-width: 768px) {
+    .contact-modal-content {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+        max-height: 85vh;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.2rem;
+    }
+
+    .nav-links .contact-trigger {
+        display: none;
+    }
+
+    .typewriter-text {
+        min-width: 200px;
+        font-size: 1.5rem;
+    }
+
+    .benefit-flip-card {
+        height: 200px;
+    }
+
+    .testimonial-card-marquee {
+        min-width: 320px;
+        max-width: 320px;
+        padding: 2rem;
+    }
+
+    .testimonials-track {
+        animation: scroll 40s linear infinite;
+    }
+}
+
+/* ========== FIXES - ADD AT THE VERY END ========== */
+
+/* Contact Modal Z-Index Fix */
+.contact-modal {
+    z-index: 999999 !important;
+}
+
+.contact-modal-overlay {
+    z-index: 999998 !important;
+}
+
+.contact-modal-content {
+    z-index: 1000000 !important;
+}
+
+/* Typewriter Effect Fix */
+#typewriter-text {
+    display: inline-block;
+    min-width: 300px;
+    text-align: left;
+}
+
+.typewriter-cursor {
+    display: inline-block;
+    animation: blink 0.7s step-end infinite;
+    color: var(--primary-red);
+    font-weight: 400;
+}
+
+@keyframes blink {
+
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Benefit Flip Cards - Increased Height & White Text */
+.benefit-flip-card {
+    height: 300px !important;
+}
+
+.benefit-flip-back {
+    background: linear-gradient(135deg, #e10600 0%, #b00500 100%) !important;
+    color: white !important;
+}
+
+.benefit-flip-back h4 {
+    color: white !important;
+    font-size: 1.15rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.benefit-flip-back p {
+    color: white !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    opacity: 0.95;
+}
+
+/* Get In Touch Button Fix */
+.contact-trigger-btn {
+    cursor: pointer;
+}
+
+/* Footer Contact Link - Remove Button Styling */
+.footer-column a.contact-trigger {
+    background: none !important;
+    color: white !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    display: inline !important;
+}
+
+.footer-column a.contact-trigger:hover {
+    color: var(--accent-blue) !important;
+    transform: none !important;
+    background: none !important;
+}
+
+/* Testimonials Gradients */
+.testimonials-marquee {
+    position: relative;
+}
+
+.testimonials-gradient-left,
+.testimonials-gradient-right {
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.testimonials-gradient-left {
+    left: 0;
+    background: linear-gradient(to right, #f8f9fa 0%, rgba(248, 249, 250, 0) 100%);
+}
+
+.testimonials-gradient-right {
+    right: 0;
+    background: linear-gradient(to left, #f8f9fa 0%, rgba(248, 249, 250, 0) 100%);
+}
+
+/* Read More Button */
+.read-more-btn {
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.read-more-btn:hover {
+    background: var(--accent-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonial Modal */
+.testimonial-modal {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-modal.show {
+    display: flex;
+}
+
+.testimonial-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 999998;
+}
+
+.testimonial-modal-content {
+    background: white;
+    padding: 3rem;
+    border-radius: 25px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 80vh;
+    position: relative;
+    z-index: 1000000;
+    animation: modalSlideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+.testimonial-modal-close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-gray);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    line-height: 1;
+    z-index: 10;
+}
+
+.testimonial-modal-close:hover {
+    background: var(--light-gray);
+    color: var(--primary-red);
+    transform: rotate(90deg);
+}
+
+.testimonial-modal-body {
+    margin: 2rem 0;
+}
+
+.testimonial-modal-body p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: var(--text-gray);
+    font-style: italic;
+}
+
+#testimonialModalAuthor {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--light-gray);
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    #typewriter-text {
+        min-width: 200px;
+        font-size: 1.2rem;
+    }
+
+    .benefit-flip-card {
+        height: 270px !important;
+    }
+
+    .testimonial-modal-content {
+        padding: 2rem 1.5rem;
+        max-height: 85vh;
+    }
+
+    .testimonials-gradient-left,
+    .testimonials-gradient-right {
+        width: 80px;
     }
 }

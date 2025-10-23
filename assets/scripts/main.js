@@ -4,12 +4,50 @@
 let currentSlideIndex = 0;
 let slideInterval;
 
+// Typewriter effect variables
+const typewriterWords = ['Infrastructure', 'Solutions', 'Excellence', 'Future'];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typewriterElement = null;
+
+function typewriterEffect() {
+    typewriterElement = document.getElementById('typewriter-text');
+
+    if (!typewriterElement) {
+        setTimeout(typewriterEffect, 100);
+        return;
+    }
+
+    const currentWord = typewriterWords[wordIndex];
+
+    if (isDeleting) {
+        typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    let typeSpeed = isDeleting ? 80 : 80;
+
+    if (!isDeleting && charIndex === currentWord.length) {
+        typeSpeed = 2000;
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % typewriterWords.length;
+        typeSpeed = 500;
+    }
+
+    setTimeout(typewriterEffect, typeSpeed);
+}
+
 function showSlide(index) {
     const slides = document.querySelectorAll('.hero-slide');
     const dots = document.querySelectorAll('.dot');
-    const heroTitle = document.getElementById('hero-title');
     const heroSubtitle = document.getElementById('hero-subtitle');
-    
+
     if (index >= slides.length) {
         currentSlideIndex = 0;
     } else if (index < 0) {
@@ -17,41 +55,20 @@ function showSlide(index) {
     } else {
         currentSlideIndex = index;
     }
-    
-    // Hide all slides and remove active class
+
     slides.forEach(slide => {
         slide.classList.remove('active');
     });
-    
-    // Remove active class from all dots
+
     dots.forEach(dot => {
         dot.classList.remove('active');
     });
-    
-    // Show current slide and activate dot
+
     const activeSlide = slides[currentSlideIndex];
     activeSlide.classList.add('active');
     dots[currentSlideIndex].classList.add('active');
-    
-    // Update hero text content
-    const title = activeSlide.dataset.title;
+
     const subtitle = activeSlide.dataset.subtitle;
-    
-    if (title && heroTitle) {
-        // Check if title contains "Infrastructure" to add highlight
-        if (title.includes('Infrastructure')) {
-            heroTitle.innerHTML = title.replace('Infrastructure', '<span class=\"hero-highlight\">Infrastructure</span>');
-        } else if (title.includes('Solutions')) {
-            heroTitle.innerHTML = title.replace('Solutions', '<span class=\"hero-highlight\">Solutions</span>');
-        } else if (title.includes('Excellence')) {
-            heroTitle.innerHTML = title.replace('Excellence', '<span class=\"hero-highlight\">Excellence</span>');
-        } else if (title.includes('Mastery')) {
-            heroTitle.innerHTML = title.replace('Mastery', '<span class=\"hero-highlight\">Mastery</span>');
-        } else {
-            heroTitle.textContent = title;
-        }
-    }
-    
     if (subtitle && heroSubtitle) {
         heroSubtitle.textContent = subtitle;
     }
@@ -76,7 +93,6 @@ function resetSlideInterval() {
     slideInterval = setInterval(autoSlide, 5000);
 }
 
-// Make functions global for onclick handlers
 window.changeSlide = changeSlide;
 window.currentSlide = currentSlide;
 
@@ -93,16 +109,117 @@ window.addEventListener('scroll', () => {
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+        const href = this.getAttribute('href');
+        if (href !== '#' && !this.classList.contains('contact-trigger') && !this.classList.contains('contact-trigger-btn')) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         }
     });
 });
+
+// Contact Modal functionality
+function initContactModal() {
+    const contactModal = document.getElementById('contactModal');
+    const contactClose = document.querySelector('.contact-close');
+    const contactOverlay = document.querySelector('.contact-modal-overlay');
+
+    // Use event delegation for dynamically added triggers
+    document.addEventListener('click', function (e) {
+        if (e.target.matches('.contact-trigger') ||
+            e.target.matches('.contact-trigger-btn') ||
+            e.target.closest('.contact-trigger') ||
+            e.target.closest('.contact-trigger-btn')) {
+            e.preventDefault();
+            e.stopPropagation();
+            contactModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+
+    if (contactClose) {
+        contactClose.addEventListener('click', (e) => {
+            e.stopPropagation();
+            contactModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    if (contactOverlay) {
+        contactOverlay.addEventListener('click', (e) => {
+            e.stopPropagation();
+            contactModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && contactModal && contactModal.classList.contains('show')) {
+            contactModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Testimonial Modal functionality
+function initTestimonialModal() {
+    const testimonialModal = document.getElementById('testimonialModal');
+    const testimonialClose = document.querySelector('.testimonial-modal-close');
+    const testimonialOverlay = document.querySelector('.testimonial-modal-overlay');
+    const testimonialFullText = document.getElementById('testimonialFullText');
+    const testimonialModalAuthor = document.getElementById('testimonialModalAuthor');
+
+    document.addEventListener('click', function (e) {
+        if (e.target.matches('.read-more-btn') || e.target.closest('.read-more-btn')) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const card = e.target.closest('.testimonial-card-marquee');
+            const fullText = card.getAttribute('data-full-text');
+            const authorInfo = card.querySelector('.testimonial-author').cloneNode(true);
+
+            // Remove the "Read More" button from cloned author info if it exists
+            const readMoreInAuthor = authorInfo.querySelector('.read-more-btn');
+            if (readMoreInAuthor) {
+                readMoreInAuthor.remove();
+            }
+
+            testimonialFullText.textContent = fullText;
+            testimonialModalAuthor.innerHTML = authorInfo.innerHTML;
+
+            testimonialModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+
+    if (testimonialClose) {
+        testimonialClose.addEventListener('click', (e) => {
+            e.stopPropagation();
+            testimonialModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    if (testimonialOverlay) {
+        testimonialOverlay.addEventListener('click', (e) => {
+            e.stopPropagation();
+            testimonialModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && testimonialModal && testimonialModal.classList.contains('show')) {
+            testimonialModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
 
 // Intersection Observer for animations
 const observerOptions = {
@@ -124,6 +241,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize hero slider
     showSlide(0);
     slideInterval = setInterval(autoSlide, 5000);
+
+    // Start typewriter effect
+    setTimeout(typewriterEffect, 800);
+
+    // Initialize modals
+    initContactModal();
+    initTestimonialModal();
 
     // Observe sections for fade-in animation
     const sections = document.querySelectorAll('section');
@@ -150,14 +274,13 @@ function animateStats() {
                 const target = entry.target;
                 const originalText = target.textContent;
                 target.dataset.originalText = originalText;
-                
-                // Extract number from text
+
                 const match = originalText.match(/[\d]+/);
                 if (match) {
                     const endValue = parseInt(match[0]);
                     animateValue(target, 0, endValue, 2000, '');
                 }
-                
+
                 statsObserver.unobserve(target);
             }
         });
@@ -168,27 +291,24 @@ function animateStats() {
 
 function animateValue(element, start, end, duration, suffix = '') {
     const startTime = performance.now();
-    
+
     function update(currentTime) {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        
-        // Easing function for smooth animation
+
         const easeOutQuad = progress * (2 - progress);
         const current = start + (end - start) * easeOutQuad;
-        
-        // Format number without decimals
+
         const formatted = Math.floor(current);
         element.textContent = suffix + formatted + (end >= 100 && formatted < end ? '+' : '');
-        
+
         if (progress < 1) {
             requestAnimationFrame(update);
         } else {
-            // Ensure final value is exact with original suffix
             element.textContent = element.dataset.originalText || (suffix + end);
         }
     }
-    
+
     requestAnimationFrame(update);
 }
 
@@ -199,7 +319,7 @@ function highlightActiveSection() {
 
     window.addEventListener('scroll', () => {
         let current = '';
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
@@ -220,13 +340,13 @@ function highlightActiveSection() {
 // Project cards hover effect enhancement
 document.addEventListener('DOMContentLoaded', () => {
     const projectCards = document.querySelectorAll('.project-card');
-    
+
     projectCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             this.style.transform = 'translateY(-10px) scale(1.02)';
         });
-        
-        card.addEventListener('mouseleave', function() {
+
+        card.addEventListener('mouseleave', function () {
             this.style.transform = 'translateY(0) scale(1)';
         });
     });
@@ -235,10 +355,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // Location cards interaction
 document.addEventListener('DOMContentLoaded', () => {
     const locationCards = document.querySelectorAll('.location-card');
-    
+
     locationCards.forEach(card => {
-        card.addEventListener('click', function() {
-            // Add a pulse animation on click
+        card.addEventListener('click', function () {
             this.style.animation = 'pulse 0.5s ease';
             setTimeout(() => {
                 this.style.animation = '';
@@ -265,13 +384,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Mobile menu toggle (for future implementation)
-function toggleMobileMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
-}
-
-// Lazy load images if any are added dynamically
+// Lazy load images
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {

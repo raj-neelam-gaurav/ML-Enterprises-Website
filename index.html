@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ML Enterprises LLP - Building India's Infrastructure</title>
     <link rel="icon" type="image/png" href="assets/images/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -24,29 +27,68 @@
                 <li><a href="#locations">Locations</a></li>
                 <li><a href="#clients">Clients</a></li>
                 <li><a href="#career">Career</a></li>
+                <li><a href="#" class="contact-trigger">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Contact Modal -->
+    <div id="contactModal" class="contact-modal">
+        <div class="contact-modal-overlay"></div>
+        <div class="contact-modal-content">
+            <span class="contact-close">&times;</span>
+            <h2>Contact <span class="section-highlight">Us</span></h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h4>Address</h4>
+                        <p>SCO 204, 1st Floor, Near Bharat Gas Agency,<br>Opposite BMG Mall, Rewari,<br>Haryana India
+                            123401</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <h4>Phone</h4>
+                        <p><a href="tel:+918814950544">+91 88149 50544</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <p><a href="mailto:Info@mlenterprises.net">Info@mlenterprises.net</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-slider">
-            <div class="hero-slide active" data-title="Building India's Infrastructure" data-subtitle="Five decades of excellence in Railway, Industrial & Civil Construction">
+            <div class="hero-slide active" data-title="Building India's Infrastructure"
+                data-subtitle="Five decades of excellence in Railway, Industrial & Civil Construction">
                 <img src="assets/images/banner_images/1.jpg" alt="Infrastructure Project 1">
             </div>
-            <div class="hero-slide" data-title="Expert Railway Solutions" data-subtitle="Comprehensive railway siding and track infrastructure across India">
+            <div class="hero-slide" data-title="Expert Railway Solutions"
+                data-subtitle="Comprehensive railway siding and track infrastructure across India">
                 <img src="assets/images/banner_images/2.jpg" alt="Infrastructure Project 2">
             </div>
-            <div class="hero-slide" data-title="Industrial Excellence" data-subtitle="PEB Warehouses, Silos, and Industrial Construction Projects">
+            <div class="hero-slide" data-title="Industrial Excellence"
+                data-subtitle="PEB Warehouses, Silos, and Industrial Construction Projects">
                 <img src="assets/images/banner_images/3.jpg" alt="Infrastructure Project 3">
             </div>
-            <div class="hero-slide" data-title="Civil Engineering Mastery" data-subtitle="Bridges, Roads, and Infrastructure Development Since 1972">
+            <div class="hero-slide" data-title="Civil Engineering Mastery"
+                data-subtitle="Bridges, Roads, and Infrastructure Development Since 1972">
                 <img src="assets/images/banner_images/4.jpg" alt="Infrastructure Project 4">
             </div>
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 id="hero-title">Building India's <span class="hero-highlight">Infrastructure</span></h1>
+            <h1>Building India's </h1>
+            <h1><span class="hero-highlight"><span id="typewriter-text"></span></h1>
             <p id="hero-subtitle">Five decades of excellence in Railway, Industrial & Civil Construction</p>
             <a href="#about" class="cta-button">Discover Our Story</a>
         </div>
@@ -92,10 +134,13 @@
     <section id="about" class="about">
         <div class="about-container">
             <div class="about-content">
-                <h2>About <span class="section-highlight">ML Enterprises</span></h2>
-                <p>Since 1972, ML Enterprises LLP has been at the forefront of India's infrastructure development. From our humble beginnings as M/s. Sis Ram Bir Singh in Rewari, Haryana, we've evolved into a comprehensive EPC powerhouse.</p>
-                <p>We specialize in Railway & Siding Works, PEB Warehouse Projects, Electrical Works, FFS Works, Silo Projects, and comprehensive Civil Construction across India.</p>
-                <p><strong>Our commitment:</strong> Excellence in execution, timely delivery, and building relationships based on mutual trust.</p>
+                <h2>About <span class="section-highlight">ML Enterprises LLP</span></h2>
+                <p>Since 1972, ML Enterprises LLP has been at the forefront of India's infrastructure development. From
+                    our humble beginnings as M/s. Sis Ram Bir Singh in Rewari, Haryana, we've evolved into a
+                    comprehensive EPC powerhouse.</p>
+                <p>We specialize in Railway & Siding Works, PEB Warehouse Projects, Electrical Works, FFS Works,  Silo project civil work, yard development, OHE works, road works and comprehensive Civil Construction across pan India.</p>
+                <p><strong>Our commitment:</strong> Excellence in execution, timely delivery, and building relationships
+                    based on mutual trust.</p>
                 <a href="#projects" class="cta-button">View Our Projects</a>
             </div>
             <div class="about-image">
@@ -108,7 +153,7 @@
     <section id="timeline" class="timeline">
         <div class="timeline-container">
             <h2>Our <span class="section-highlight">Journey</span></h2>
-            
+
             <div class="timeline-items">
                 <div class="timeline-item">
                     <div class="timeline-year">1972</div>
@@ -118,7 +163,8 @@
                     </div>
                     <div class="timeline-content">
                         <h3>Foundation</h3>
-                        <p>Company founded as M/s. Sis Ram Bir Singh, for civil construction and infrastructure projects</p>
+                        <p>Company founded as M/s. Sis Ram Bir Singh, for civil construction and infrastructure projects
+                        </p>
                     </div>
                 </div>
 
@@ -130,7 +176,8 @@
                     </div>
                     <div class="timeline-content">
                         <h3>Rebranding & Expansion</h3>
-                        <p>Rebranded as ML Enterprises; began handling large-scale railway siding projects PAN India.</p>
+                        <p>Rebranded as ML Enterprises; began handling large-scale railway siding projects PAN India.
+                        </p>
                     </div>
                 </div>
 
@@ -142,7 +189,8 @@
                     </div>
                     <div class="timeline-content">
                         <h3>Diversification</h3>
-                        <p>Diversified into PEB warehouse, electrical, and FFS works; strengthened technical capabilities.</p>
+                        <p>Diversified into PEB warehouse, electrical, and FFS works; strengthened technical
+                            capabilities.</p>
                     </div>
                 </div>
 
@@ -165,7 +213,8 @@
                     </div>
                     <div class="timeline-content">
                         <h3>Present Day</h3>
-                        <p>Currently executing projects worth ₹129.57 Crore across 8 Indian states with 90+ professionals.</p>
+                        <p>Currently executing projects worth ₹129.57 Crore across 8 Indian states with 90+
+                            professionals.</p>
                     </div>
                 </div>
             </div>
@@ -183,7 +232,8 @@
                     </div>
                     <div class="project-content">
                         <h3>Railway Siding Works</h3>
-                        <p>Comprehensive railway infrastructure including track laying, signaling, and electrification across multiple states.</p>
+                        <p>Comprehensive railway infrastructure including track laying, signaling, and electrification
+                            across multiple states.</p>
                         <span class="project-badge">Ongoing</span>
                     </div>
                 </div>
@@ -194,7 +244,8 @@
                     </div>
                     <div class="project-content">
                         <h3>PEB Warehouse Projects</h3>
-                        <p>Modern pre-engineered building solutions for industrial warehousing and storage facilities.</p>
+                        <p>Modern pre-engineered building solutions for industrial warehousing and storage facilities.
+                        </p>
                         <span class="project-badge">Completed</span>
                     </div>
                 </div>
@@ -205,7 +256,8 @@
                     </div>
                     <div class="project-content">
                         <h3>Electrical Infrastructure</h3>
-                        <p>High-voltage electrical installations and power distribution systems for industrial clients.</p>
+                        <p>High-voltage electrical installations and power distribution systems for industrial clients.
+                        </p>
                         <span class="project-badge">In Progress</span>
                     </div>
                 </div>
@@ -238,7 +290,8 @@
                     </div>
                     <div class="project-content">
                         <h3>Civil Construction</h3>
-                        <p>Comprehensive civil construction including bridges, buildings, and infrastructure development.</p>
+                        <p>Comprehensive civil construction including bridges, buildings, and infrastructure
+                            development.</p>
                         <span class="project-badge">Multiple Sites</span>
                     </div>
                 </div>
@@ -250,17 +303,13 @@
     <section id="locations" class="locations">
         <div class="locations-container">
             <h2>Our <span class="section-highlight">Locations</span></h2>
-            
+
             <!-- Interactive Map -->
             <div class="map-container">
                 <div class="map-wrapper">
-                    <iframe 
-                        src="https://www.google.com/maps/d/u/0/embed?mid=1yPH3ebtlJySRLv9PN81ifClI25uQd6U&ehbc=2E312F&noprof=1" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
+                    <iframe
+                        src="https://www.google.com/maps/d/u/0/embed?mid=1yPH3ebtlJySRLv9PN81ifClI25uQd6U&ehbc=2E312F&noprof=1"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
@@ -352,28 +401,35 @@
             <p class="clients-intro">Trusted by India's leading infrastructure and industrial companies</p>
             <div class="clients-grid">
                 <div class="client-logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Adani_2012_logo.png/1024px-Adani_2012_logo.png" alt="Adani Group">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Adani_2012_logo.png/1024px-Adani_2012_logo.png"
+                        alt="Adani Group">
                 </div>
                 <div class="client-logo">
-                    <img src="https://pristinelogistics.com/wp-content/themes/Pristine-Theme/images/logo/logo1.png" alt="Pristine Logistics">
+                    <img src="https://pristinelogistics.com/wp-content/themes/Pristine-Theme/images/logo/logo1.png"
+                        alt="Pristine Logistics">
                 </div>
                 <div class="client-logo">
                     <img src="https://www.shivakriti.net/images/shivakriti-logo.png" alt="Shivakriti International">
                 </div>
                 <div class="client-logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/RvnlLOGO.png" alt="Rail Vikas Nigam Limited">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/RvnlLOGO.png"
+                        alt="Rail Vikas Nigam Limited">
                 </div>
                 <div class="client-logo">
-                    <img src="https://d1rbiogke1jwo5.cloudfront.net/wp-content/uploads/2021/12/Vedanta-Logo-JPG.jpg" alt="Vedanta Limited">
+                    <img src="https://d1rbiogke1jwo5.cloudfront.net/wp-content/uploads/2021/12/Vedanta-Logo-JPG.jpg"
+                        alt="Vedanta Limited">
                 </div>
                 <div class="client-logo">
-                    <img src="https://lh4.googleusercontent.com/proxy/lD_8febeYDrd0sBIU8hzNMtnzqC9P2mDzIMow3xYEUhNJBRyr_7gyGheIxu_7kPQwzKzaTuzf2eIo0faVfbc" alt="ARSS Infrastructure">
+                    <img src="https://lh4.googleusercontent.com/proxy/lD_8febeYDrd0sBIU8hzNMtnzqC9P2mDzIMow3xYEUhNJBRyr_7gyGheIxu_7kPQwzKzaTuzf2eIo0faVfbc"
+                        alt="ARSS Infrastructure">
                 </div>
                 <div class="client-logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/HZL_Logo.png" alt="Hindustan Zinc Limited">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/HZL_Logo.png"
+                        alt="Hindustan Zinc Limited">
                 </div>
                 <div class="client-logo">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjY9yyJKW4o139285HZ9Py37KshYUJOoOmWZR4LJD9hz02AVsZJTK7Bx5WBxURNBv-MUY&usqp=CAU" alt="Worlds Window Group">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjY9yyJKW4o139285HZ9Py37KshYUJOoOmWZR4LJD9hz02AVsZJTK7Bx5WBxURNBv-MUY&usqp=CAU"
+                        alt="Worlds Window Group">
                 </div>
             </div>
         </div>
@@ -383,35 +439,196 @@
     <section id="testimonials" class="testimonials">
         <div class="testimonials-container">
             <h2>What Our <span class="section-highlight">Team Says</span></h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="quote-icon">"</div>
-                    <p class="testimonial-text">The growth here is real and supported every step of the way.</p>
-                    <div class="testimonial-author">
-                        <h4>Kunal Das</h4>
-                        <p class="designation">Project Manager</p>
-                        <p class="journey">Joined as Site Engineer • March 2023</p>
-                        <p class="location">Panipat</p>
+            <div class="testimonials-marquee">
+                <div class="testimonials-gradient-left"></div>
+                <div class="testimonials-gradient-right"></div>
+                <div class="testimonials-track">
+                    <!-- First set -->
+                    <div class="testimonial-card-marquee"
+                        data-full-text="My motto is to work together and grow together. At ML Enterprises LLP, I strongly believe that success is not an individual achievement but the result of collective effort. True growth happens when we move forward together — supporting, inspiring, and learning from one another every day. My vision has always been to build an organization grounded in trust, transparency, and mutual respect, where every team member feels empowered to contribute their best. Through our focus on employee development, welfare initiatives, and a balanced work culture, we strive to create an environment that encourages both professional and personal growth. I firmly believe that when people work with unity and a shared purpose, progress becomes natural and success truly becomes sustainable.">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">My motto is to work together and grow together. At ML Enterprises
+                            LLP, I strongly believe that success is not an individual achievement but the result of
+                            collective effort. True growth happens when we move forward together...</p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="testimonial-author">
+                            <h4>Mr. Tilak Yadav</h4>
+                            <p class="designation">Managing Partner, ML Enterprises LLP</p>
+                        </div>
                     </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon">"</div>
-                    <p class="testimonial-text">Everyone is approachable, ideas are heard, and teamwork makes even the hardest tasks achievable.</p>
-                    <div class="testimonial-author">
-                        <h4>Dinesh Kumar</h4>
-                        <p class="designation">Senior Foreman</p>
+
+                    <div class="testimonial-card-marquee"
+                        data-full-text="Perfection and improvement are the only keys to success. At ML Enterprises LLP, I believe that continuous improvement and attention to perfection are the foundation of lasting success. Every project we undertake is an opportunity to refine our processes, enhance our quality standards, and deliver beyond expectations. My focus has always been on maintaining excellence in every aspect of our work — from execution on site to client satisfaction. By striving for perfection and embracing improvement as a constant journey, we ensure that our organization continues to grow stronger, more efficient, and more trusted every day.">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Perfection and improvement are the only keys to success. At ML
+                            Enterprises LLP, I believe that continuous improvement and attention to perfection are the
+                            foundation of lasting success...</p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="testimonial-author">
+                            <h4>Mr. Pratap Yadav</h4>
+                            <p class="designation">Partner, ML Enterprises LLP</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card-marquee"
+                        data-full-text="Hard work, better planning, and excellence in execution lead to successful and timely completion of every project. At ML Enterprises LLP, I believe that the foundation of every successful project lies in dedicated effort, strategic planning, and a commitment to excellence. Our goal is not only to meet deadlines but to deliver quality outcomes that exceed expectations. Through teamwork, discipline, and focused execution, we ensure that every project is completed efficiently and handed over on time — reflecting our promise of reliability and professionalism.">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Hard work, better planning, and excellence in execution lead to
+                            successful and timely completion of every project. At ML Enterprises LLP, I believe that the
+                            foundation of every successful project...</p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="testimonial-author">
+                            <h4>Mr. Neeraj Yadav</h4>
+                            <p class="designation">Partner, ML Enterprises LLP</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card-marquee"
+                        data-full-text="Having worked with several reputed Limited and multinational companies, I can confidently say that my experience at ML Enterprises LLP has been truly rewarding. From the day I joined, I never felt that the facilities or work culture here were any less than those of large corporate organizations. At ML Enterprises LLP, I feel genuinely happy and satisfied to be part of a team that values both professional growth and personal well-being. I have also had the opportunity to contribute by improving various employee-focused initiatives, such as mediclaim and insurance policies, leave structures, work culture, and overall work-life balance. My constant effort has been to create an environment where every employee feels proud to work, stays motivated, and sees a long-term future with the company. I firmly believe that when employees feel cared for, they care more about the organization — and that's what makes ML Enterprises LLP a truly great place to work.">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Having worked with several reputed Limited and multinational
+                            companies, I can confidently say that my experience at ML Enterprises LLP has been truly
+                            rewarding. From the day I joined, I never felt that the facilities...</p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="testimonial-author">
+                            <h4>Shekhar Saurabh</h4>
+                            <p class="designation">Project Head & Coordinator</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card-marquee"
+                        data-full-text="The growth here is real and supported every step of the way. I have experienced tremendous professional development and feel valued as a key member of the team. Starting as a Site Engineer in March 2023, I've been given opportunities to learn, lead, and contribute to major projects. The mentorship and training programs have been instrumental in my journey to becoming a Project Manager. This organization truly invests in its people.">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">The growth here is real and supported every step of the way. I have
+                            experienced tremendous professional development and feel valued as a key member of the
+                            team...</p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="testimonial-author">
+                            <h4>Kunal Das</h4>
+                            <p class="designation">Project Manager</p>
+                            <p class="journey">Joined as Site Engineer • March 2023</p>
+                            <p class="location">Panipat</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card-marquee"
+                        data-full-text="Everyone is approachable, ideas are heard, and teamwork makes even the hardest tasks achievable. This is a workplace where collaboration truly drives success. As a Senior Foreman, I've witnessed firsthand how the leadership values every team member's input. The open-door policy and supportive environment make it easy to communicate challenges and find solutions together. Working here feels like being part of a family that's building something meaningful.">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Everyone is approachable, ideas are heard, and teamwork makes even
+                            the hardest tasks achievable. This is a workplace where collaboration truly drives
+                            success...</p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="testimonial-author">
+                            <h4>Dinesh Kumar</h4>
+                            <p class="designation">Senior Foreman</p>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="testimonial-card-marquee"
+                        data-full-text="My motto is to work together and grow together. At ML Enterprises LLP, I strongly believe that success is not an individual achievement but the result of collective effort. True growth happens when we move forward together — supporting, inspiring, and learning from one another every day. My vision has always been to build an organization grounded in trust, transparency, and mutual respect, where every team member feels empowered to contribute their best. Through our focus on employee development, welfare initiatives, and a balanced work culture, we strive to create an environment that encourages both professional and personal growth. I firmly believe that when people work with unity and a shared purpose, progress becomes natural and success truly becomes sustainable.">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">My motto is to work together and grow together. At ML Enterprises
+                            LLP, I strongly believe that success is not an individual achievement but the result of
+                            collective effort. True growth happens when we move forward together...</p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="testimonial-author">
+                            <h4>Mr. Tilak Yadav</h4>
+                            <p class="designation">Managing Partner, ML Enterprises LLP</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card-marquee"
+                        data-full-text="Perfection and improvement are the only keys to success. At ML Enterprises LLP, I believe that continuous improvement and attention to perfection are the foundation of lasting success. Every project we undertake is an opportunity to refine our processes, enhance our quality standards, and deliver beyond expectations. My focus has always been on maintaining excellence in every aspect of our work — from execution on site to client satisfaction. By striving for perfection and embracing improvement as a constant journey, we ensure that our organization continues to grow stronger, more efficient, and more trusted every day.">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Perfection and improvement are the only keys to success. At ML
+                            Enterprises LLP, I believe that continuous improvement and attention to perfection are the
+                            foundation of lasting success...</p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="testimonial-author">
+                            <h4>Mr. Pratap Yadav</h4>
+                            <p class="designation">Partner, ML Enterprises LLP</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card-marquee"
+                        data-full-text="Hard work, better planning, and excellence in execution lead to successful and timely completion of every project. At ML Enterprises LLP, I believe that the foundation of every successful project lies in dedicated effort, strategic planning, and a commitment to excellence. Our goal is not only to meet deadlines but to deliver quality outcomes that exceed expectations. Through teamwork, discipline, and focused execution, we ensure that every project is completed efficiently and handed over on time — reflecting our promise of reliability and professionalism.">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Hard work, better planning, and excellence in execution lead to
+                            successful and timely completion of every project. At ML Enterprises LLP, I believe that the
+                            foundation of every successful project...</p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="testimonial-author">
+                            <h4>Mr. Neeraj Yadav</h4>
+                            <p class="designation">Partner, ML Enterprises LLP</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card-marquee"
+                        data-full-text="Having worked with several reputed Limited and multinational companies, I can confidently say that my experience at ML Enterprises LLP has been truly rewarding. From the day I joined, I never felt that the facilities or work culture here were any less than those of large corporate organizations. At ML Enterprises LLP, I feel genuinely happy and satisfied to be part of a team that values both professional growth and personal well-being. I have also had the opportunity to contribute by improving various employee-focused initiatives, such as mediclaim and insurance policies, leave structures, work culture, and overall work-life balance. My constant effort has been to create an environment where every employee feels proud to work, stays motivated, and sees a long-term future with the company. I firmly believe that when employees feel cared for, they care more about the organization — and that's what makes ML Enterprises LLP a truly great place to work.">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Having worked with several reputed Limited and multinational
+                            companies, I can confidently say that my experience at ML Enterprises LLP has been truly
+                            rewarding. From the day I joined, I never felt that the facilities...</p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="testimonial-author">
+                            <h4>Shekhar Saurabh</h4>
+                            <p class="designation">Project Head & Coordinator</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card-marquee"
+                        data-full-text="The growth here is real and supported every step of the way. I have experienced tremendous professional development and feel valued as a key member of the team. Starting as a Site Engineer in March 2023, I've been given opportunities to learn, lead, and contribute to major projects. The mentorship and training programs have been instrumental in my journey to becoming a Project Manager. This organization truly invests in its people.">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">The growth here is real and supported every step of the way. I have
+                            experienced tremendous professional development and feel valued as a key member of the
+                            team...</p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="testimonial-author">
+                            <h4>Kunal Das</h4>
+                            <p class="designation">Project Manager</p>
+                            <p class="journey">Joined as Site Engineer • March 2023</p>
+                            <p class="location">Panipat</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card-marquee"
+                        data-full-text="Everyone is approachable, ideas are heard, and teamwork makes even the hardest tasks achievable. This is a workplace where collaboration truly drives success. As a Senior Foreman, I've witnessed firsthand how the leadership values every team member's input. The open-door policy and supportive environment make it easy to communicate challenges and find solutions together. Working here feels like being part of a family that's building something meaningful.">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Everyone is approachable, ideas are heard, and teamwork makes even
+                            the hardest tasks achievable. This is a workplace where collaboration truly drives
+                            success...</p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="testimonial-author">
+                            <h4>Dinesh Kumar</h4>
+                            <p class="designation">Senior Foreman</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Testimonial Modal -->
+    <div id="testimonialModal" class="testimonial-modal">
+        <div class="testimonial-modal-overlay"></div>
+        <div class="testimonial-modal-content">
+            <span class="testimonial-modal-close">&times;</span>
+            <div class="quote-icon">"</div>
+            <div class="testimonial-modal-body">
+                <p id="testimonialFullText"></p>
+            </div>
+            <div id="testimonialModalAuthor" class="testimonial-author"></div>
+        </div>
+    </div>
+
     <!-- Work Culture Section -->
     <section id="culture" class="culture">
         <div class="culture-container">
             <h2>Work Culture at <span class="section-highlight">ML Enterprises LLP</span></h2>
-            <p class="culture-intro">At ML Enterprises, we believe in creating an environment where every team member thrives. Our culture is built on collaboration, respect, and continuous growth.</p>
-            
+            <p class="culture-intro">At ML Enterprises, we believe in creating an environment where every team member
+                thrives. Our culture is built on collaboration, respect, and continuous growth.</p>
+
             <div class="culture-grid">
                 <div class="culture-item">
                     <h3>Open & Collaborative Environment</h3>
@@ -419,11 +636,13 @@
                 </div>
                 <div class="culture-item">
                     <h3>Recognition & Rewards</h3>
-                    <p>Your contributions matter. We celebrate achievements and acknowledge excellence at every level.</p>
+                    <p>Your contributions matter. We celebrate achievements and acknowledge excellence at every level.
+                    </p>
                 </div>
                 <div class="culture-item">
                     <h3>Growth Opportunities</h3>
-                    <p>Clear career progression with mentorship, training programs, and certifications to help you advance.</p>
+                    <p>Clear career progression with mentorship, training programs, and certifications to help you
+                        advance.</p>
                 </div>
                 <div class="culture-item">
                     <h3>Work-Life Balance</h3>
@@ -449,8 +668,9 @@
     <section id="training" class="training">
         <div class="training-container">
             <h2>Training & <span class="section-highlight">Safety</span></h2>
-            <p class="training-intro">Safety is our top priority. We provide comprehensive training programs and maintain the highest safety standards across all our projects.</p>
-            
+            <p class="training-intro">Safety is our top priority. We provide comprehensive training programs and
+                maintain the highest safety standards across all our projects.</p>
+
             <div class="training-features">
                 <div class="training-feature">
                     <div class="feature-icon">🎓</div>
@@ -496,28 +716,67 @@
     <section id="career" class="career">
         <div class="career-container">
             <h2>Join Our <span class="hero-highlight">Team</span></h2>
-            <p>At ML Enterprises LLP, we don't just offer jobs—we build careers. Join a team where your contribution matters, growth is supported, and success is celebrated.</p>
-            
+            <p>At ML Enterprises LLP, we don't just offer jobs—we build careers. Join a team where your contribution
+                matters, growth is supported, and success is celebrated.</p>
+
             <div class="benefits-grid">
-                <div class="benefit-item">
-                    <h4>₹3L Health Cover</h4>
-                    <p>For you and your family</p>
+                <div class="benefit-flip-card">
+                    <div class="benefit-flip-inner">
+                        <div class="benefit-flip-front">
+                            <h4>₹3L Health Cover</h4>
+                            <p>For you and your family</p>
+                        </div>
+                        <div class="benefit-flip-back">
+                            <h4>Comprehensive Health Coverage</h4>
+                            <p>We provide insurance for you and your family members, ensuring
+                                complete medical security and peace of mind.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="benefit-item">
-                    <h4>30 Days Leave</h4>
-                    <p>Annual paid leave</p>
+
+                <div class="benefit-flip-card">
+                    <div class="benefit-flip-inner">
+                        <div class="benefit-flip-front">
+                            <h4>30 Days Leave</h4>
+                            <p>Annual paid leave</p>
+                        </div>
+                        <div class="benefit-flip-back">
+                            <h4>Generous Leave Policy</h4>
+                            <p>Enjoy 30 days of annual paid leave to spend quality time with family, pursue hobbies, or
+                                simply recharge.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="benefit-item">
-                    <h4>On-Time Salary</h4>
-                    <p>Never any delays</p>
+
+                <div class="benefit-flip-card">
+                    <div class="benefit-flip-inner">
+                        <div class="benefit-flip-front">
+                            <h4>On-Time Salary</h4>
+                            <p>Never any delays</p>
+                        </div>
+                        <div class="benefit-flip-back">
+                            <h4>Timely & Transparent</h4>
+                            <p>Your salary is credited on time, every time, without any delays. </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="benefit-item">
-                    <h4>Career Growth</h4>
-                    <p>Clear progression path</p>
+
+                <div class="benefit-flip-card">
+                    <div class="benefit-flip-inner">
+                        <div class="benefit-flip-front">
+                            <h4>Career Growth</h4>
+                            <p>Clear progression path</p>
+                        </div>
+                        <div class="benefit-flip-back">
+                            <h4>Professional Development</h4>
+                            <p>We invest in your growth with training programs, mentorship, certifications, and clear
+                                promotion pathways.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <a href="#contact" class="cta-button">Explore Opportunities</a>
+            <a href="#" class="cta-button contact-trigger-btn">Get In Touch</a>
         </div>
     </section>
 
@@ -527,9 +786,27 @@
             <div class="footer-column">
                 <h3>ML Enterprises LLP</h3>
                 <p>Building India's Infrastructure since 1972</p>
-                <p style="margin-top: 1rem;">Rewari, Haryana, India</p>
+                <div style="margin-top: 1.5rem;">
+                    <h4 style="color: var(--primary-red); margin-bottom: 0.5rem; font-size: 1.1rem;">Contact Us</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">
+                        SCO 204, 1st Floor<br>
+                        Near Bharat Gas Agency<br>
+                        Opposite BMG Mall<br>
+                        Rewari, Haryana 123401
+                    </p>
+                    <p style="margin-top: 0.5rem;">
+                        <a href="tel:+918814950544" style="color: white; text-decoration: none;">
+                            📞 +91 88149 50544
+                        </a>
+                    </p>
+                    <p style="margin-top: 0.3rem;">
+                        <a href="mailto:Info@mlenterprises.net" style="color: white; text-decoration: none;">
+                            ✉️ Info@mlenterprises.net
+                        </a>
+                    </p>
+                </div>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul>
@@ -537,19 +814,21 @@
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#career">Careers</a></li>
+                    <li><a href="#" class="contact-trigger">Contact Us</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Our Services</h3>
                 <ul>
                     <li>Railway & Siding Works</li>
                     <li>PEB Warehouse Projects</li>
                     <li>Electrical Works</li>
+                    <li>FFS Works</li>
                     <li>Civil Construction</li>
                 </ul>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Our Clients</h3>
                 <ul>
@@ -557,10 +836,12 @@
                     <li>Vedanta Limited</li>
                     <li>RVNL</li>
                     <li>Hindustan Zinc</li>
+                    <li>DP World</li>
+                    <li>Ultratech</li>
                 </ul>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <p>© 2025 ML Enterprises LLP. All Rights Reserved.</p>
         </div>
@@ -568,4 +849,5 @@
 
     <script src="assets/scripts/main.js"></script>
 </body>
+
 </html>
