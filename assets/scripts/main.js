@@ -6,10 +6,17 @@ let slideInterval;
 
 // Typewriter effect variables
 const typewriterWords = ['Infrastructure', 'Solutions', 'Excellence', 'Future'];
+const typewriterSubtitles = [
+    'Five decades of excellence in Railway, Industrial & Civil Construction',
+    'Comprehensive railway siding and track infrastructure across India',
+    'PEB Warehouses, Silos, and Industrial Construction Projects',
+    'Bridges, Roads, and Infrastructure Development Since 1972'
+];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 let typewriterElement = null;
+let typewriterTimeout = null;
 
 function typewriterEffect() {
     typewriterElement = document.getElementById('typewriter-text');
@@ -29,18 +36,26 @@ function typewriterEffect() {
         charIndex++;
     }
 
-    let typeSpeed = isDeleting ? 80 : 80;
+    let typeSpeed = isDeleting ? 50 : 100;
 
     if (!isDeleting && charIndex === currentWord.length) {
+        // Finished typing - wait before deleting
         typeSpeed = 2000;
         isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
+        // Finished deleting - change slide and move to next word
         isDeleting = false;
         wordIndex = (wordIndex + 1) % typewriterWords.length;
+        
+        // Change the slide when text is fully erased
+        showSlide(wordIndex);
+        
+        // Wait a bit before starting to type the next word
         typeSpeed = 500;
     }
 
-    setTimeout(typewriterEffect, typeSpeed);
+    // Continue the typewriter effect
+    typewriterTimeout = setTimeout(typewriterEffect, typeSpeed);
 }
 
 function showSlide(index) {
@@ -68,29 +83,54 @@ function showSlide(index) {
     activeSlide.classList.add('active');
     dots[currentSlideIndex].classList.add('active');
 
-    const subtitle = activeSlide.dataset.subtitle;
-    if (subtitle && heroSubtitle) {
-        heroSubtitle.textContent = subtitle;
+    // Update subtitle based on current index
+    if (heroSubtitle) {
+        heroSubtitle.textContent = typewriterSubtitles[currentSlideIndex];
     }
 }
 
 function changeSlide(direction) {
-    showSlide(currentSlideIndex + direction);
-    resetSlideInterval();
+    // Stop current typewriter effect
+    if (typewriterTimeout) {
+        clearTimeout(typewriterTimeout);
+    }
+    
+    // Calculate new index
+    let newIndex = currentSlideIndex + direction;
+    if (newIndex >= typewriterWords.length) {
+        newIndex = 0;
+    } else if (newIndex < 0) {
+        newIndex = typewriterWords.length - 1;
+    }
+    
+    // Update word index and reset typewriter
+    wordIndex = newIndex;
+    charIndex = 0;
+    isDeleting = false;
+    
+    // Show the new slide
+    showSlide(wordIndex);
+    
+    // Restart typewriter effect
+    typewriterTimeout = setTimeout(typewriterEffect, 300);
 }
 
 function currentSlide(index) {
+    // Stop current typewriter effect
+    if (typewriterTimeout) {
+        clearTimeout(typewriterTimeout);
+    }
+    
+    // Update word index and reset typewriter
+    wordIndex = index;
+    charIndex = 0;
+    isDeleting = false;
+    
+    // Show the selected slide
     showSlide(index);
-    resetSlideInterval();
-}
-
-function autoSlide() {
-    showSlide(currentSlideIndex + 1);
-}
-
-function resetSlideInterval() {
-    clearInterval(slideInterval);
-    slideInterval = setInterval(autoSlide, 5000);
+    
+    // Restart typewriter effect
+    typewriterTimeout = setTimeout(typewriterEffect, 300);
 }
 
 window.changeSlide = changeSlide;
@@ -129,7 +169,6 @@ function initContactModal() {
     const contactClose = document.querySelector('.contact-close');
     const contactOverlay = document.querySelector('.contact-modal-overlay');
 
-    // Use event delegation for dynamically added triggers
     document.addEventListener('click', function (e) {
         if (e.target.matches('.contact-trigger') ||
             e.target.matches('.contact-trigger-btn') ||
@@ -183,7 +222,6 @@ function initTestimonialModal() {
             const fullText = card.getAttribute('data-full-text');
             const authorInfo = card.querySelector('.testimonial-author').cloneNode(true);
 
-            // Remove the "Read More" button from cloned author info if it exists
             const readMoreInAuthor = authorInfo.querySelector('.read-more-btn');
             if (readMoreInAuthor) {
                 readMoreInAuthor.remove();
@@ -221,6 +259,39 @@ function initTestimonialModal() {
     });
 }
 
+// Mobile flip card functionality
+function initMobileFlipCards() {
+    if (window.innerWidth <= 768) {
+        const flipCards = document.querySelectorAll('.benefit-flip-card');
+        
+        flipCards.forEach(card => {
+            // Remove existing flip button if any
+            const existingBtn = card.querySelector('.mobile-flip-btn');
+            if (existingBtn) existingBtn.remove();
+            
+            // Create flip button
+            const flipBtn = document.createElement('button');
+            flipBtn.className = 'mobile-flip-btn';
+            flipBtn.innerHTML = '↻';
+            flipBtn.setAttribute('aria-label', 'Flip card');
+            
+            card.appendChild(flipBtn);
+            
+            flipBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                card.classList.toggle('flipped');
+                
+                // Change button icon based on state
+                if (card.classList.contains('flipped')) {
+                    flipBtn.innerHTML = '↺';
+                } else {
+                    flipBtn.innerHTML = '↻';
+                }
+            });
+        });
+    }
+}
+
 // Intersection Observer for animations
 const observerOptions = {
     threshold: 0.1,
@@ -240,14 +311,21 @@ const observer = new IntersectionObserver((entries) => {
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize hero slider
     showSlide(0);
-    slideInterval = setInterval(autoSlide, 5000);
-
-    // Start typewriter effect
-    setTimeout(typewriterEffect, 800);
+    
+    // Start typewriter effect after a short delay
+    setTimeout(() => {
+        typewriterEffect();
+    }, 800);
 
     // Initialize modals
     initContactModal();
     initTestimonialModal();
+    
+    // Initialize mobile flip cards
+    initMobileFlipCards();
+    
+    // Re-initialize on resize
+    window.addEventListener('resize', initMobileFlipCards);
 
     // Observe sections for fade-in animation
     const sections = document.querySelectorAll('section');
@@ -384,26 +462,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Lazy load images
-if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                if (img.dataset.src) {
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                    imageObserver.unobserve(img);
-                }
-            }
-        });
-    });
-
-    document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
-    });
-}
-
 // Console message
-console.log('%c🏗️ ML Enterprises LLP', 'color: #e10600; font-size: 20px; font-weight: bold;');
+console.log('%c🗃️ ML Enterprises LLP', 'color: #e10600; font-size: 20px; font-weight: bold;');
 console.log('%cBuilding India\'s Infrastructure since 1972', 'color: #007bff; font-size: 14px;');
+console.log('This website is made by %crajgaurav.me', 'color:rgb(0, 255, 195);');
