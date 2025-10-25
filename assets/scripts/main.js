@@ -378,7 +378,7 @@ function animateValue(element, start, end, duration, suffix = '') {
         const current = start + (end - start) * easeOutQuad;
 
         const formatted = Math.floor(current);
-        element.textContent = suffix + formatted + (end >= 100 && formatted < end ? '+' : '');
+        element.textContent = suffix + formatted + (end >= 100 && formatted < end ? 'Cr' : '');
 
         if (progress < 1) {
             requestAnimationFrame(update);

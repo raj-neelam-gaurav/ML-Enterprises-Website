@@ -576,9 +576,16 @@ nav {
     align-items: center;
 }
 
+.map-container img {
+    width: 40rem;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
 .map-wrapper {
-    width: 600px;
-    height: 600px;
+    width: 50rem;
+    height: 54rem;
     max-width: 100%;
     border-radius: 15px;
     overflow: hidden;

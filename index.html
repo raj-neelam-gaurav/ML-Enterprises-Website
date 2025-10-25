@@ -113,7 +113,7 @@
             </div>
             <div class="stat-item">
                 <span class="stat-number">₹130Cr</span>
-                <span class="stat-label">Ongoing Projects</span>
+                <span class="stat-label">Ongoing Projects worth</span>
             </div>
             <div class="stat-item">
                 <span class="stat-number">52</span>
@@ -308,16 +308,16 @@
             <h2>Our <span class="section-highlight">Locations</span></h2>
 
             <!-- Interactive Map -->
+            <!-- <div class="map-container">
+                <img src="assets/images/country.svg" alt="Map">
+            </div> -->
+            <!-- Interactive Map -->
             <div class="map-container">
                 <div class="map-wrapper">
-                    <iframe
-                        src="https://www.google.com/maps/d/u/0/embed?mid=1yPH3ebtlJySRLv9PN81ifClI25uQd6U&ehbc=2E312F&noprof=1"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                    <div id="map"></div>
                 </div>
-                <p class="map-note">Custom map with ML Enterprises project locations. Click markers for details.</p>
             </div>
+
 
             <h3 class="locations-subtitle">Active Project Sites</h3>
             <div class="locations-grid">
@@ -847,7 +847,8 @@
             <p>© 2025 ML Enterprises LLP. All Rights Reserved.</p>
         </div>
     </footer>
-
+    <script src="assets/scripts/mapdata.js"></script>
+    <script src="assets/scripts/countrymap.js"></script>
     <script src="assets/scripts/main.js"></script>
 </body>
 
