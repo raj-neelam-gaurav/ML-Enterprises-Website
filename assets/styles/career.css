@@ -1,0 +1,371 @@
+/* ML Enterprises - Career Page Styles */
+
+/* --- Hero Section --- */
+.career-hero {
+    height: 80vh;
+    background: url('../images/site/8.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+    position: relative;
+}
+
+.career-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%);
+    z-index: 1;
+}
+
+.career-hero .hero-content {
+    z-index: 2;
+    position: relative;
+    max-width: 900px;
+    padding: 2rem;
+}
+
+.career-hero h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    animation: fadeInUp 1s ease;
+}
+
+.career-hero p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    font-weight: 300;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease 0.3s backwards;
+}
+
+.scroll-down-btn {
+    display: inline-block;
+    margin-top: 3rem;
+    color: white;
+    animation: bounce 2s infinite;
+    opacity: 0.8;
+}
+
+/* SVG Icon in Scroll Button */
+.scroll-down-btn svg {
+    width: 40px;
+    height: 40px;
+    stroke: white;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.active-link {
+    color: var(--primary-red) !important;
+}
+.active-link::after {
+    width: 100% !important;
+}
+
+/* --- Expanded EVP Section (Zig-Zag) --- */
+.evp-expanded {
+    padding: 6rem 2rem;
+    background: white;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 1rem auto 0;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 6rem;
+    opacity: 0; /* Hidden for scroll animation */
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.feature-row.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-image {
+    flex: 1;
+    position: relative;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.feature-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Red Accent Box */
+.feature-accent {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: var(--primary-red);
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    z-index: 2;
+}
+
+.feature-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+/* Icon Container Styles */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--light-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+/* SVG Styles */
+.feature-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: var(--primary-red);
+}
+
+.feature-row:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.feature-content h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-red);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.feature-content h4 {
+    font-size: 2.5rem;
+    color: var(--secondary-black);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.feature-content p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* --- Life at ML Gallery --- */
+.life-at-ml {
+    padding: 6rem 2rem;
+    background: var(--light-gray);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.gallery-item {
+    position: relative;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay span {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px solid white;
+    padding: 0.8rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Apply Section --- */
+.apply-section {
+    padding: 8rem 2rem;
+    background: linear-gradient(135deg, #111 0%, #222 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.apply-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(225, 6, 0, 0.15) 0%, transparent 50%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.apply-section h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-box {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 2rem;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.email-link {
+    color: var(--primary-red);
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: white;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+    .feature-row {
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+    .feature-row.reverse {
+        flex-direction: column;
+    }
+
+    .feature-image {
+        width: 100%;
+        height: 300px;
+    }
+
+    .feature-icon {
+        margin: 0 auto 1rem;
+    }
+
+    .career-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .apply-section h2 {
+        font-size: 2.5rem;
+    }
+    
+    .email-link {
+        font-size: 1.5rem;
+    }
+}
