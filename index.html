@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/projects.css">
 </head>
 
 <body>
@@ -371,6 +372,77 @@
                 <div class="client-logo">
                     <img src="https://lh4.googleusercontent.com/proxy/lD_8febeYDrd0sBIU8hzNMtnzqC9P2mDzIMow3xYEUhNJBRyr_7gyGheIxu_7kPQwzKzaTuzf2eIo0faVfbc"
                         alt="ARSS Infrastructure">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Table Section -->
+    <section id="works-table" class="works-section">
+        <div class="works-container">
+            <div class="works-header">
+                <h2>Project <span class="section-highlight">Portfolio</span></h2>
+                <p>A detailed overview of our engineering milestones. Transparent, trackable, and transformative.</p>
+            </div>
+
+            <!-- Download Button -->
+            <div class="download-btn-wrapper">
+                <a href="assets/documents/ML_Enterprises_Works_Details.pdf" download="ML_Enterprises_Works_List.pdf" class="download-pdf-btn">
+                    <span>📄</span> Download Complete Project List (PDF)
+                </a>
+            </div>
+
+            <!-- Tabs: Swapped Order so Completed is first and active -->
+            <div class="works-tabs">
+                <button class="works-tab-btn active" onclick="openTab(event, 'completed-projects')">Completed Projects</button>
+                <button class="works-tab-btn" onclick="openTab(event, 'ongoing-projects')">Ongoing Projects</button>
+            </div>
+
+            <!-- Tab 1: Completed (Now Active by Default) -->
+            <div id="completed-projects" class="works-tab-content active">
+                <div class="table-responsive">
+                    <table class="projects-table">
+                        <thead>
+                            <tr>
+                                <th width="5%">Sr.</th>
+                                <th width="40%">Name of Work</th>
+                                <th width="25%">Client</th>
+                                <th width="15%">Value</th>
+                                <th width="15%">Completion</th>
+                            </tr>
+                        </thead>
+                        <tbody id="completed-table-body">
+                            <!-- Content injected via JS -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+                    <span class="total-label">Total Executed Value:</span>
+                    <span id="completed-total" class="total-amount">Loading...</span>
+                </div>
+            </div>
+
+            <!-- Tab 2: Ongoing -->
+            <div id="ongoing-projects" class="works-tab-content">
+                <div class="table-responsive">
+                    <table class="projects-table">
+                        <thead>
+                            <tr>
+                                <th width="5%">Sr.</th>
+                                <th width="40%">Name of Work</th>
+                                <th width="25%">Client</th>
+                                <th width="15%">Value</th>
+                                <th width="15%">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ongoing-table-body">
+                            <!-- Content injected via JS -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+                    <span class="total-label">Total Ongoing Value:</span>
+                    <span id="ongoing-total" class="total-amount">Loading...</span>
                 </div>
             </div>
         </div>
@@ -785,9 +857,12 @@
             <p>© 2025 ML Enterprises LLP. All Rights Reserved.</p>
         </div>
     </footer>
+
     <script src="assets/scripts/mapdata.js"></script>
     <script src="assets/scripts/countrymap.js"></script>
+    <script src="assets/scripts/projects.js"></script>
     <script src="assets/scripts/main.js"></script>
+
 </body>
 
 </html>
