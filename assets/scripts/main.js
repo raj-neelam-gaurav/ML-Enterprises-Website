@@ -461,7 +461,6 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
-
 // Gallery Teaser Fading Effect
 document.addEventListener('DOMContentLoaded', () => {
     const teaserImages = document.querySelectorAll('.gallery-fade-image');
