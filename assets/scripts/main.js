@@ -462,6 +462,29 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// Gallery Teaser Fading Effect
+document.addEventListener('DOMContentLoaded', () => {
+    const teaserImages = document.querySelectorAll('.gallery-fade-image');
+    
+    if (teaserImages.length > 0) {
+        let currentIndex = 0;
+        
+        // Set first image active initially
+        teaserImages[0].classList.add('active');
+
+        setInterval(() => {
+            // Remove active class from current
+            teaserImages[currentIndex].classList.remove('active');
+            
+            // Move to next index (looping back to 0)
+            currentIndex = (currentIndex + 1) % teaserImages.length;
+            
+            // Add active class to next
+            teaserImages[currentIndex].classList.add('active');
+        }, 4000); // Change image every 4 seconds
+    }
+});
+
 // Console message
 console.log('%c🗃️ ML Enterprises LLP', 'color: #e10600; font-size: 20px; font-weight: bold;');
 console.log('%cBuilding India\'s Infrastructure since 1972', 'color: #007bff; font-size: 14px;');

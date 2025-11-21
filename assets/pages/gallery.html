@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - ML Enterprises LLP</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- Page Specific Styles -->
+    <link rel="stylesheet" href="../styles/gallery.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../images/logo.png" alt="ML Enterprises Logo" class="logo-image">
+                <span class="logo-text">ML Enterprises LLP</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../index.html#clients">Clients</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="#" class="contact-trigger">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Gallery Hero -->
+    <section class="gallery-hero">
+        <div class="gallery-hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Our Work in <span class="hero-highlight">Focus</span></h1>
+            <p>A visual journey through our projects, people, and progress.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Grid Section -->
+    <section class="gallery-section">
+        <div class="gallery-container">
+            
+            <!-- Filters -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="site">Site Works</button>
+                <button class="filter-btn" data-filter="team">Our Team</button>
+                <button class="filter-btn" data-filter="training">Training</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Images will be injected here by JS -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>ML Enterprises LLP</h3>
+                <p>Building India's Infrastructure since 1972</p>
+                <div style="margin-top: 1.5rem;">
+                    <h4 style="color: var(--primary-red); margin-bottom: 0.5rem; font-size: 1.1rem;">Contact Us</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">
+                        SCO 204, 1st Floor<br>
+                        Near Bharat Gas Agency<br>
+                        Opposite BMG Mall<br>
+                        Rewari, Haryana 123401
+                    </p>
+                    <p style="margin-top: 0.5rem;">
+                        <a href="tel:+918814950544" style="color: white; text-decoration: none;">📞 +91 88149 50544</a>
+                    </p>
+                    <p style="margin-top: 0.3rem;">
+                        <a href="mailto:Info@mlenterprises.net" style="color: white; text-decoration: none;">✉️ Info@mlenterprises.net</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../index.html#about">About Us</a></li>
+                    <li><a href="../../index.html#projects">Projects</a></li>
+                    <li><a href="career.html">Careers</a></li>
+                    <li><a href="#" class="contact-trigger">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Our Services</h3>
+                <ul>
+                    <li>Railway & Siding Works</li>
+                    <li>PEB Warehouse Projects</li>
+                    <li>Electrical Works</li>
+                    <li>FFS Works</li>
+                    <li>Civil Construction</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Our Clients</h3>
+                <ul>
+                    <li>Adani Group</li>
+                    <li>Vedanta Limited</li>
+                    <li>RVNL</li>
+                    <li>Hindustan Zinc</li>
+                    <li>DP World</li>
+                    <li>Ultratech</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 ML Enterprises LLP. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Contact Modal (Reused) -->
+    <div id="contactModal" class="contact-modal">
+        <div class="contact-modal-overlay"></div>
+        <div class="contact-modal-content">
+            <span class="contact-close">×</span>
+            <h2>Contact <span class="section-highlight">Us</span></h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h4>Address</h4>
+                        <p>SCO 204, 1st Floor, Near Bharat Gas Agency,<br>Opposite BMG Mall, Rewari,<br>Haryana India 123401</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <h4>Phone</h4>
+                        <p><a href="tel:+918814950544">+91 88149 50544</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <p><a href="mailto:Info@mlenterprises.net">Info@mlenterprises.net</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/gallery.js"></script>
+</body>
+</html>

@@ -140,13 +140,19 @@ const worksData = {
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Render tables
     renderTable('ongoing-table-body', worksData.ongoing);
     renderTable('completed-table-body', worksData.completed);
     updateTotals();
     
-    // Set default tab to Completed
+    // Set default state: Show Completed, Hide Ongoing
     document.getElementById('completed-projects').style.display = "block";
-    document.getElementById('completed-projects').classList.add('active');
+    document.getElementById('ongoing-projects').style.display = "none";
+    
+    // Ensure active class is set correctly for fade effect
+    setTimeout(() => {
+        document.getElementById('completed-projects').classList.add('active');
+    }, 10);
 });
 
 function renderTable(elementId, data) {
@@ -171,9 +177,7 @@ function renderTable(elementId, data) {
 }
 
 function updateTotals() {
-    // Calculate total value (parsing the string "₹6.94 Cr" to float 6.94)
     const parseValue = (str) => parseFloat(str.replace(/[₹, Cr]/g, '')) || 0;
-    
     const ongoingTotal = worksData.ongoing.reduce((acc, curr) => acc + parseValue(curr.value), 0);
     const completedTotal = worksData.completed.reduce((acc, curr) => acc + parseValue(curr.value), 0);
 
@@ -186,22 +190,29 @@ function updateTotals() {
 
 // Tab Switching Logic
 function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("works-tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
+    // 1. Hide all tab content
+    const tabcontent = document.getElementsByClassName("works-tab-content");
+    for (let i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
         tabcontent[i].classList.remove('active');
     }
-    tablinks = document.getElementsByClassName("works-tab-btn");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+
+    // 2. Remove active class from all buttons
+    const tablinks = document.getElementsByClassName("works-tab-btn");
+    for (let i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
     }
-    document.getElementById(tabName).style.display = "block";
-    
-    // Small timeout to allow display:block to apply before opacity transition
-    setTimeout(() => {
-        document.getElementById(tabName).classList.add('active');
-    }, 10);
-    
-    evt.currentTarget.className += " active";
+
+    // 3. Show the current tab
+    const selectedTab = document.getElementById(tabName);
+    if (selectedTab) {
+        selectedTab.style.display = "block";
+        // Small delay to allow display:block to render before adding opacity class
+        setTimeout(() => {
+            selectedTab.classList.add('active');
+        }, 10);
+    }
+
+    // 4. Add active class to the button that was clicked
+    evt.currentTarget.classList.add("active");
 }
