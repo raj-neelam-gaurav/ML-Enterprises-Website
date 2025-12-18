@@ -2281,3 +2281,12 @@ section {
         margin-bottom: 2rem;
     }
 }
+/* Vertical Timeline Fix for Mobile */
+@media screen and (max-width: 768px) {
+    .timeline-marker {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+}

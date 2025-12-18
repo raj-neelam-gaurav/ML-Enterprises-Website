@@ -10,7 +10,7 @@ const typewriterSubtitles = [
     'Five decades of excellence in Railway, Industrial & Civil Construction',
     'Comprehensive railway siding and track infrastructure across India',
     'PEB Warehouses, Silos, and Industrial Construction Projects',
-    'Bridges, Roads, and Infrastructure Development Since 1972'
+    'Bridges, Roads, and Infrastructure Development Since 2008'
 ];
 let wordIndex = 0;
 let charIndex = 0;
