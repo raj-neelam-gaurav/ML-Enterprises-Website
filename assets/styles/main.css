@@ -382,7 +382,7 @@ nav {
 
 /* Timeline Section */
 .timeline {
-    padding: 6rem 2rem;
+    padding: 2rem 2rem;
     background: white;
 }
 
@@ -552,7 +552,7 @@ nav {
 
 /* Locations Section */
 .locations {
-    padding: 6rem 2rem;
+    padding: 2rem 2rem;
     background: white;
 }
 
@@ -919,7 +919,7 @@ section {
 
 /* Testimonials Section */
 .testimonials {
-    padding: 6rem 2rem;
+    padding: 2rem 2rem;
     background: white;
 }
 
@@ -992,7 +992,7 @@ section {
 
 /* Work Culture Section */
 .culture {
-    padding: 6rem 2rem;
+    padding: 2rem 2rem;
     background: var(--light-gray);
 }
 
@@ -2288,5 +2288,156 @@ section {
         flex-direction: column;
         align-items: center;
         height: 100%;
+    }
+}
+.download-pdf-btn{
+    margin-bottom: 1rem;
+}
+/* ========== COMPANY STRUCTURE / ORGANIZATION CHART ========== */
+
+.company-structure {
+    padding: 2rem 2rem;
+    background: white;
+}
+
+.structure-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.structure-container h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--secondary-black);
+}
+
+.org-chart-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.org-chart-image {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.org-chart-image:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .company-structure {
+        padding: 4rem 1.5rem;
+    }
+
+    .structure-container h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .org-chart-image-wrapper {
+        padding: 1.5rem;
+    }
+}
+/* ========== MISSION & POLICIES SECTION ========== */
+
+.mission-policies {
+    padding: 2rem 2rem;
+    background: white;
+}
+
+.mission-policies-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mission-section,
+.policy-section {
+    margin-bottom: 3.5rem;
+}
+
+.mission-section h2,
+.policy-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-black);
+    font-weight: 700;
+}
+
+.mission-section p,
+.policy-section p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+}
+
+.mission-list,
+.policy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mission-list li,
+.policy-list li {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1;
+    margin-bottom: 0.8rem;
+    padding-left: 1.8rem;
+    position: relative;
+}
+
+.mission-list li::before,
+.policy-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-red);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mission-policies {
+        padding: 3rem 1.5rem;
+    }
+
+    .mission-section,
+    .policy-section {
+        margin-bottom: 2.5rem;
+    }
+
+    .mission-section h2,
+    .policy-section h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .mission-section p,
+    .policy-section p {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .mission-list li,
+    .policy-list li {
+        font-size: 0.95rem;
+        margin-bottom: 0.7rem;
+        padding-left: 1.6rem;
     }
 }

@@ -9,63 +9,63 @@ const worksData = {
             name: "Civil Works of Custom Yard at Nagpur ICD",
             client: "Adani Logistics Ltd",
             value: "₹6.94 Cr",
-            status: "In Progress"
+            status: "In&nbspProgress"
         },
         {
             sr: 2,
             name: "Civil work for paved yard, drain, Boundary wall, Electrical, PEB Warehouse and FFS Work",
             client: "DP World (Panipat)",
             value: "₹40.71 Cr",
-            status: "In Progress"
+            status: "In&nbspProgress"
         },
         {
             sr: 3,
             name: "Civil Works of Silo Complex and Allied Facilities at Damoh, MP",
             client: "HM Agri Logistics Ltd",
             value: "₹12.00 Cr",
-            status: "In Progress"
+            status: "In&nbspProgress"
         },
         {
             sr: 4,
             name: "Supply & Execution of P-way Work, OHE, PSI & Telecom",
             client: "Ultratech Cement Limited",
             value: "₹13.25 Cr",
-            status: "In Progress"
+            status: "In&nbspProgress"
         },
         {
             sr: 5,
             name: "Civil Work Package of Chandari Site, UP (FCI AgriSilo Project)",
             client: "Adani Agri Logistics Ltd",
             value: "₹14.36 Cr",
-            status: "In Progress"
+            status: "In&nbspProgress"
         },
         {
             sr: 6,
             name: "OHE work at ICD Tumb",
             client: "Adani Forwarding Agent Pvt Ltd",
             value: "₹7.84 Cr",
-            status: "In Progress"
+            status: "In&nbspProgress"
         },
         {
             sr: 7,
             name: "Civil Works of Silo Complex at Ujjain, MP",
             client: "HM Agri Logistics Ltd",
             value: "₹16.94 Cr",
-            status: "In Progress"
+            status: "In&nbspProgress"
         },
         {
             sr: 8,
             name: "Civil Works of Silo Complex at Dhar, MP",
             client: "HM Agri Logistics Ltd",
             value: "₹13.05 Cr",
-            status: "In Progress"
+            status: "In&nbspProgress"
         },
         {
             sr: 9,
             name: "Civil Works of Silo Complex at Guna, MP",
             client: "HM Agri Logistics Ltd",
             value: "₹11.38 Cr",
-            status: "In Progress"
+            status: "In&nbspProgress"
         }
     ],
     completed: [
